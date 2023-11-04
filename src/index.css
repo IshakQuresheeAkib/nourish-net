@@ -8,7 +8,7 @@
 @layer base {
     
     .myHeading{
-        @apply border-l-orange-600 pl-2 border-l-4 font-semibold mb-4
+        @apply border-l-orange-600 pl-2 border-l-8 font-bold mb-4 text-5xl text-black/90
     }
     .textStyle{
         @apply bg-clip-text text-transparent myColor

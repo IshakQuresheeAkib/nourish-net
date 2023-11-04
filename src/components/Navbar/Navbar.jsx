@@ -51,14 +51,14 @@ const Navbar = () => {
    
     return (
         <div className="relative w-full h-full text-white">
-            <nav className="flex justify-between items-center pt-3" data-aos='slide-down'>
+            <nav className="flex justify-between items-center pt-3 px-20" data-aos='slide-down'>
                 <div >
-                    <h1 className="font-bold md:text-5xl text-2xl ml-16 font-grechen">Nourish<span className="textStyle">Net</span></h1>
+                    <h1 className="font-bold md:text-5xl text-2xl font-grechen">Nourish<span className="textStyle">Net</span></h1>
                 </div>
                 <div className="space-x-10 lg:flex hidden navitem" >
 
                     {
-                        navbarItems.map(navbarItem => <span key={navbarItem.id}  className=" group items-center bg-transparent font-thin text-white cursor-default mr-10">
+                        navbarItems.map(navbarItem => <span key={navbarItem.id}  className=" group items-center bg-transparent font-thin text-white cursor-default ">
                                 <NavLink  to={navbarItem.link} className={`text-center text-lg relative pb-1 text-white after:transition-transform after:duration-700 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:block after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:myColor after:content-[''] after:group-hover:origin-bottom-left after:group-hover:scale-x-100 `}>{navbarItem.title}</NavLink>
                         </span>)
                     }                      
