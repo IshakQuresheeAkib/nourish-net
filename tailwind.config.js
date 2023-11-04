@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      quicksand:['Quicksand, sans-serif;']
+      quicksand:['Quicksand, sans-serif'],
+      grechen:['Grechen Fuemen, cursive']
     },
   },
   plugins: [require("daisyui")],

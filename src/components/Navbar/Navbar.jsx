@@ -39,9 +39,8 @@ const Navbar = () => {
     return (
         <div className="relative w-full h-full text-white">
             <nav className="fixed w-full top-0 bg-black/80 flex justify-between items-center md:py-4 py-3 z-50 backdrop-blur-sm" data-aos='slide-down'>
-                <div className="flex items-center md:ml-0 ml-10">
-                    <img src="/logo.png" alt="" className="md:w-24 w-14 top-0 -rotate-12 absolute ml-9" />
-                    <h1 className="font-bold md:text-3xl text-2xl ml-16 md:mt-6 ">Car <span className="textStyle">Canvas</span></h1>
+                <div >
+                    <h1 className="font-bold md:text-5xl text-2xl ml-16 font-grechen">Nourish<span className="textStyle">Net</span></h1>
                 </div>
                 <div className="space-x-10 md:flex hidden navitem" >
 
