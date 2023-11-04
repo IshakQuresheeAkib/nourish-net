@@ -35,14 +35,27 @@ const Navbar = () => {
             enqueueSnackbar('Logged Out Successfully!',{variant:'success'})
         })
     }
+
+    window.addEventListener("scroll", function () {
+        let navbar = document.querySelector('.navbar');
+        let banner = document.querySelector('.banner');
+        let scrollPosition = window.scrollY;
+      
+        if (scrollPosition > banner.clientHeight) {
+          navbar.classList.add('fixed', 'bg-gray-800'); // Apply fixed position and a different background color
+        } else {
+          navbar.classList.remove('fixed', 'bg-gray-800'); // Remove fixed position and the background color
+        }
+      });
+      
    
     return (
         <div className="relative w-full h-full text-white">
-            <nav className="fixed w-full top-0 bg-black/80 flex justify-between items-center md:py-4 py-3 z-50 backdrop-blur-sm" data-aos='slide-down'>
+            <nav className=" w-full top-0 flex justify-between items-center py-3 z-50 backdrop-blur-sm" data-aos='slide-down'>
                 <div >
                     <h1 className="font-bold md:text-5xl text-2xl ml-16 font-grechen">Nourish<span className="textStyle">Net</span></h1>
                 </div>
-                <div className="space-x-10 md:flex hidden navitem" >
+                <div className="space-x-10 lg:flex hidden navitem" >
 
                     {
                         navbarItems.map(navbarItem => <span key={navbarItem.id}  className=" group items-center bg-transparent font-thin text-white cursor-default mr-10">
@@ -74,7 +87,7 @@ const Navbar = () => {
                     </button>
                 </div>
             </nav>
-            <div className="md:hidden fixed w-full z-50 top-0 text-white menu">                
+            <div className="lg:hidden fixed w-full z-50 top-0 text-white menu">                
                 <Menu className="bg-black text-white ">                   
                     <NavLink className="menu-item" to='/'>Home</NavLink>            
                     <NavLink className="menu-item" to='/addproduct'>Add Product</NavLink>
