@@ -51,7 +51,7 @@ const Navbar = () => {
    
     return (
         <div className="relative w-full h-full text-white">
-            <nav className=" w-full top-0 flex justify-between items-center py-3 z-50 backdrop-blur-sm" data-aos='slide-down'>
+            <nav className="flex justify-between items-center pt-3" data-aos='slide-down'>
                 <div >
                     <h1 className="font-bold md:text-5xl text-2xl ml-16 font-grechen">Nourish<span className="textStyle">Net</span></h1>
                 </div>

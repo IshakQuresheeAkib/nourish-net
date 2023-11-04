@@ -12,7 +12,7 @@ const Routes = () => {
              <div>
                     {pathname === '/' ? <Home></Home> : <Navbar></Navbar>}
                 </div> 
-             <div className="min-h-screen mt-28"><Outlet></Outlet></div>
+             <div className=""><Outlet></Outlet></div>
         </div>
     )}
 export default Routes;
