@@ -1,7 +1,10 @@
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './style.css'
 
 const ErrorElement = () => {
+
+    const navigate = useNavigate();
+
     return (
         <div>
              
@@ -17,7 +20,7 @@ const ErrorElement = () => {
                 <p>Try searching again or use the Go Back button below.</p>
             </div>
             <div className="mb-20 md:mb-0">
-                <button to='/' className="text-lg outline-none focus:outline-none transform transition-all hover:scale-110 text-red-500 hover:text-red-600"><i className="mdi mdi-arrow-left mr-2"></i>Back to Home</button>
+                <button onClick={()=>navigate('/')} className="text-lg font-semibold outline-none focus:outline-none transform transition-all hover:scale-110 text-red-500 hover:text-red-600"><i className="mdi mdi-arrow-left mr-2"></i>Back to Home</button>
             </div>
         </div>
         <div className="w-full md:w-1/2 text-center">
