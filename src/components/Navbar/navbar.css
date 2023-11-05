@@ -79,10 +79,7 @@
 
 
 .active{
-   text-decoration: underline;
-   text-decoration-color: orangered;
-   text-underline-offset: 7px;
-   text-decoration-line: underline;
+   border-bottom:3.5px solid orangered;
 }
 
 .menu-item{

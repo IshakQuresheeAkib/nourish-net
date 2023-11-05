@@ -17,7 +17,7 @@ const Navbar = () => {
         { id: 2, title: 'Available Foods', link: '/available-foods'},
         { id: 10, title: 'Add Food', link: '/add-food'},
         { id: 3, title: 'Manage My Foods ', link: '/manage-my-foods' },
-        { id: 4, title: 'My Food Request', link: '/my-food-request,' },
+        { id: 4, title: 'My Food Request', link: '/my-food-request' },
         { id: 7, title: 'Contact Us', link: '/contact-us'}
       ];
 
@@ -50,7 +50,7 @@ const Navbar = () => {
       
    
     return (
-        <div className="relative w-full h-full text-white">
+        <div className="relative w-full h-full font-semibold">
             <nav className="flex justify-between items-center pt-3 px-20" data-aos='slide-down'>
                 <div >
                     <h1 className="font-bold md:text-5xl text-2xl font-grechen">Nourish<span className="textStyle">Net</span></h1>
@@ -58,31 +58,16 @@ const Navbar = () => {
                 <div className="space-x-10 lg:flex hidden navitem" >
 
                     {
-                        navbarItems.map(navbarItem => <span key={navbarItem.id}  className=" group items-center bg-transparent font-thin text-white cursor-default ">
-                                <NavLink  to={navbarItem.link} className={`text-center text-lg relative pb-1 text-white after:transition-transform after:duration-700 after:ease-in-out after:absolute after:bottom-0 after:left-0 after:block after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:myColor after:content-[''] after:group-hover:origin-bottom-left after:group-hover:scale-x-100 `}>{navbarItem.title}</NavLink>
+                        navbarItems.map(navbarItem => <span key={navbarItem.id}  className=" group items-center bg-transparent cursor-default ">
+                                <NavLink  to={navbarItem.link} className={`text-center font-semibold text-lg relative  after:transition-transform after:duration-700 after:ease-in-out after:absolute after:-bottom-1 after:left-0 after:block after:h-[3.5px] after:w-full after:origin-bottom-right after:scale-x-0 after:myColor after:content-[''] after:group-hover:origin-bottom-left after:group-hover:scale-x-100 `}>{navbarItem.title}</NavLink>
                         </span>)
                     }                      
                 </div>
                 
                 <div className="flex items-center gap-5 md:mr-10">               
-                   <div>
-                   {
-                    user &&  
-                    <div className="dropdown dropdown-end">
-                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                        <div className="w-10 rounded-full">
-                        <img src={user?.photoURL} />
-                        </div>
-                    </label>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-56 text-black">
-                        <li><a>{user?.displayName}</a></li>
-                        <li><a>{user?.email}</a></li>
-                    </ul>
-                    </div>
-                   }
-                   </div>
+
                    
-                    <button onClick={handleLogin} className="md:block hidden myBtn">
+                    <button onClick={handleLogin} className="md:block hidden myBtn text-white ">
                     {user? 'Log out' : 'Log in'}
                     </button>
                 </div>
