@@ -1,6 +1,6 @@
 const Testimonials = () => {
     return (
-        <div className="my-28 lg:mx-0 mx-10">
+        <div className="my-28 lg:mx-20 mx-10">
              <section className="">
 	<div className="container mx-auto">
 		<div className="grid items-center gap-4 xl:grid-cols-5">
