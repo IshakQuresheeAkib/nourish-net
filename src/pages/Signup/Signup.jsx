@@ -1,5 +1,7 @@
 import { MdAlternateEmail } from 'react-icons/md';
 import { AiFillEye } from 'react-icons/ai';
+import { CiUser } from 'react-icons/ci';
+import { BiSolidImage } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 // import useAuth from '../../hook/useAuth';
 import { enqueueSnackbar } from 'notistack';
@@ -48,13 +50,41 @@ const Signup = () => {
                 </div>
                 <form  className="mx-auto mb-0 mt-6 max-w-md space-y-4">
                     <div>
+                        <label className="sr-only">Name</label>
+                        <div className="relative">
+                            <input
+                                type="text"
+                                name='name'
+                                className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                                placeholder="Name"
+                            />
+                            <span className="absolute inset-y-0 text-xl end-0 grid place-content-center px-4">
+                                <CiUser/>
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <label className="sr-only">Photo Url</label>
+                        <div className="relative">
+                            <input
+                                type="text"
+                                name='photo'
+                                className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                                placeholder="Photo Url"
+                            />
+                            <span className="absolute inset-y-0 text-xl end-0 grid place-content-center px-4">
+                                <BiSolidImage></BiSolidImage>
+                            </span>
+                        </div>
+                    </div>
+                    <div>
                         <label className="sr-only">Email</label>
                         <div className="relative">
                             <input
                                 type="email"
                                 name='email'
                                 className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
-                                placeholder="Enter email"
+                                placeholder="Email"
                             />
                             <span className="absolute inset-y-0 text-xl end-0 grid place-content-center px-4">
                                 <MdAlternateEmail></MdAlternateEmail>
@@ -68,7 +98,7 @@ const Signup = () => {
                                 type="password"
                                 name="password"
                                 className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
-                                placeholder="Enter password"
+                                placeholder="Password"
                             />
                             <span className="absolute text-xl inset-y-0 end-0 grid place-content-center px-4">
                                 <AiFillEye></AiFillEye>

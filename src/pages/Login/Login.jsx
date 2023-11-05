@@ -65,7 +65,7 @@ const Login = () => {
                     <h1 className='text-center'>or</h1>
                     <hr className='w-20 text-darkRed mt-px ml-2'/>
                 </div>
-                <form  className="mx-auto mb-0 mt-9 max-w-md space-y-4">
+                <form  className="mx-auto mb-0 mt-3 max-w-md space-y-4">
                     <div>
                         <label className="sr-only">Email</label>
                         <div className="relative">
