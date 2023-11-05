@@ -39,14 +39,14 @@ const Signup = () => {
     return (
         <div className='flex md:flex-row flex-col gap-10 items-center justify-center md:px-20 px-6 min-h-screen my-14'>
             <Lottie animationData={createAccount} className='md:w-1/2'></Lottie>
-            <div className='shadow-xl rounded-xl  h-[80vh] border-black/5 p-10'>
+            <div className='shadow-xl rounded-xl border-black/5 p-10'>
                 <div className="mx-auto max-w-2xl text-center">
                     <h1 className="myHeading w-fit mx-auto">Get started today!</h1>
                     <p className="mt-6 text-gray-500">
                         {`Welcome to our car enthusiast community. Create your account to unlock exclusive features, save your favorite cars, and take the next step in your car-buying experience.`}
                     </p>
                 </div>
-                <form  className="mx-auto mb-0 mt-16 max-w-md space-y-4">
+                <form  className="mx-auto mb-0 mt-6 max-w-md space-y-4">
                     <div>
                         <label className="sr-only">Email</label>
                         <div className="relative">

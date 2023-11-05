@@ -38,7 +38,7 @@ const Navbar = () => {
       
    
     return (
-        <div className="relative w-full h-full font-semibold">
+        <div className="relative w-full h-full font-semibold p-2">
             <nav className="flex justify-between items-center pt-3 px-20" data-aos='slide-down'>
                 <div >
                     <h1 className="font-bold md:text-5xl text-2xl font-grechen">Nourish<span className="textStyle">Net</span></h1>
