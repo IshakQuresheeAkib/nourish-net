@@ -6,17 +6,16 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import Routes from './routes/Routes';
-import About from './pages/About/About';
 import AvailableFoods from './pages/Availablefoods/AvailableFoods'
 import AddFood from './pages/Addfood/AddFood'
 import ManageFoods from './pages/ManageFoods/ManageFoods'
 import FoodRequest from './pages/FoodRequest/FoodRequest'
-import ContactUs from './pages/ContactUs/ContactUs';
 import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
 import ErrorElement from './ErrorElement/ErrorElement';
 import FAQ from './components/FAQ/FAQ';
 import AuthProvider from './provicer/AuthProvider';
+import PrivateRoutes from './routes/PrivateRoutes/PrivateRoutes';
 
 const router = createBrowserRouter([
   {
@@ -25,24 +24,20 @@ const router = createBrowserRouter([
     errorElement:<ErrorElement></ErrorElement>,
     children:[
       {
-        path:'/about',
-        element:<About></About>
-      },
-      {
         path:'/available-foods',
         element:<AvailableFoods></AvailableFoods>
       },
       {
         path:'/add-food',
-        element:<AddFood></AddFood>
+        element:<PrivateRoutes><AddFood></AddFood></PrivateRoutes>
       },
       {
         path:'/manage-my-foods',
-        element:<ManageFoods></ManageFoods>
+        element:<PrivateRoutes><ManageFoods></ManageFoods></PrivateRoutes>
       },
       {
         path:'/my-food-request',
-        element:<FoodRequest></FoodRequest>
+        element:<PrivateRoutes><FoodRequest></FoodRequest></PrivateRoutes>
       },
       {
         path:'/faq',

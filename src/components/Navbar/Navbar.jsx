@@ -3,13 +3,14 @@ import { stack as Menu } from 'react-burger-menu'
 import './navbar.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
-// import useAuth from "../../hook/useAuth";
 import { enqueueSnackbar } from 'notistack';
-// import DarkMode from "../../darkmode/DarkMode";
+import useAuth from "../../hook/useAuth";
+import loginButton from '../../assets/login-button.json'
+import Lottie from "lottie-react";
 
 const Navbar = () => {
 
-    const {user,logOut} = {};
+    const {user,logOut} = useAuth();
     const navigate = useNavigate();
 
     const navbarItems = [
@@ -39,9 +40,9 @@ const Navbar = () => {
    
     return (
         <div className="relative w-full h-full font-semibold p-2">
-            <nav className="flex justify-between items-center pt-3 px-20" data-aos='slide-down'>
+            <nav className="flex justify-between items-center md:pt-3 md:px-20 pl-10" data-aos='slide-down'>
                 <div >
-                    <h1 className="font-bold md:text-5xl text-2xl font-grechen">Nourish<span className="textStyle">Net</span></h1>
+                    <h1 className="font-bold md:text-5xl text-4xl font-grechen">Nourish<span className="textStyle">Net</span></h1>
                 </div>
                 <div className="space-x-10 lg:flex hidden navitem" >
 
@@ -50,24 +51,20 @@ const Navbar = () => {
                                 <NavLink  to={navbarItem.link} className={`text-center font-bold text-lg relative  after:transition-transform after:duration-700 after:ease-in-out after:absolute after:-bottom-1 after:left-0 after:block after:h-[3.5px] after:w-full after:origin-bottom-right after:scale-x-0 after:myColor after:content-[''] after:group-hover:origin-bottom-left after:group-hover:scale-x-100 `}>{navbarItem.title}</NavLink>
                         </span>)
                     }                      
-                </div>
-                
-                <div className="flex items-center gap-5 md:mr-10">               
-
-                   
-                    <button onClick={handleLogin} className="md:block hidden myBtn ">
+                </div>                                                                 
+                <button onClick={handleLogin} className="flex items-center pr-5 justify-center border-2 rounded-2xl border-red-600 cursor-pointer text-xl">                       
+                    <Lottie animationData={loginButton} className="w-10"></Lottie>                        
                     {user? 'Log out' : 'Log in'}
-                    </button>
-                </div>
+                </button>
+                
             </nav>
             <div className="lg:hidden fixed w-full z-50 top-0 text-white menu">                
-                <Menu className="bg-black text-white ">                   
-                    <NavLink className="menu-item" to='/'>Home</NavLink>            
-                    <NavLink className="menu-item" to='/addproduct'>Add Product</NavLink>
-                    <NavLink className="menu-item" to='/mycart'>My Cart</NavLink>
-                    <button onClick={handleLogin} className="btn hover:bg-red-900 border-none bg-gradient-to-bl from-lightRed to-darkRed text-white normal-case mt-10">
-                    {user? 'Log Out' : 'Log In'}
-                    </button>
+                <Menu className="bg-black text-white ">        
+                {
+                        navbarItems.map(navbarItem => <span key={navbarItem.id}  className=" group items-center bg-transparent cursor-default mt-10">
+                                <NavLink  to={navbarItem.link} className={`menu-item text-center font-bold text-lg relative  after:transition-transform after:duration-700 after:ease-in-out after:absolute after:-bottom-1 after:left-0 after:block after:h-[3.5px] after:w-full after:origin-bottom-right after:scale-x-0 after:myColor after:content-[''] after:group-hover:origin-bottom-left after:group-hover:scale-x-100 `}>{navbarItem.title}</NavLink>
+                        </span>)
+                    } 
                 </Menu>
             </div>
         </div>

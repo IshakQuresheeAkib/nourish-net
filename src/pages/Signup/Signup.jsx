@@ -3,40 +3,42 @@ import { AiFillEye } from 'react-icons/ai';
 import { CiUser } from 'react-icons/ci';
 import { BiSolidImage } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
-// import useAuth from '../../hook/useAuth';
+import useAuth from '../../hook/useAuth';
 import { enqueueSnackbar } from 'notistack';
 import Lottie from 'lottie-react';
 import createAccount from '../../assets/klRshCwrAK.json'
 
 const Signup = () => {
 
-    // const {createUser} = useAuth();
+    const {createUser} = useAuth();
 
-    // const handleSubmit = e => {
-    //     e.preventDefault();
-    //     const form = e.target;
-    //     const email = form.email.value;
-    //     const password = form.password.value;
-    //     const newUser = {email,password};
-    //     console.log(newUser);
+    const handleSubmit = e => {
+        e.preventDefault();
+        const form = e.target;
+        const name = form.name.value;
+        const photo = form.email.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        const newUser = {email,password};
+        console.log(newUser);
 
 
-    //     if (!/(?=.*[!#$%&?^*@~() "])/.test(password)) {
-    //         return enqueueSnackbar('Password should have a special character!',{variant:'error'})
-    //     }else if (!/[A-Z]/.test(password)) {
-    //         return enqueueSnackbar('Password should have a capital letter !',{variant:'error'})
-    //     }else if(!/(?=.{8,})/.test(password)){
-    //         return enqueueSnackbar('Password should have minimum six character !',{variant:'error'})
-    //     }
+        // if (!/(?=.*[!#$%&?^*@~() "])/.test(password)) {
+        //     return enqueueSnackbar('Password should have a special character!',{variant:'error'})
+        // }else if (!/[A-Z]/.test(password)) {
+        //     return enqueueSnackbar('Password should have a capital letter !',{variant:'error'})
+        // }else if(!/(?=.{8,})/.test(password)){
+        //     return enqueueSnackbar('Password should have minimum six character !',{variant:'error'})
+        // }
 
-    //     createUser(email,password)
-    //     .then(()=>{
-    //         enqueueSnackbar('Account created successfully!',{variant:'success'})
-    //     })
-    //     .catch(err=>{
-    //         enqueueSnackbar(`${err}`,{variant:'error'})
-    //     })
-    // }
+        createUser(email,password)
+        .then(()=>{
+            enqueueSnackbar('Account created successfully!',{variant:'success'})
+        })
+        .catch(err=>{
+            enqueueSnackbar(`${err}`,{variant:'error'})
+        })
+    }
 
     return (
         <div className='flex md:flex-row flex-col gap-10 items-center justify-center md:px-20 px-6 min-h-screen my-14'>
@@ -48,7 +50,7 @@ const Signup = () => {
                         {`Welcome to our car enthusiast community. Create your account to unlock exclusive features, save your favorite cars, and take the next step in your car-buying experience.`}
                     </p>
                 </div>
-                <form  className="mx-auto mb-0 mt-6 max-w-md space-y-4">
+                <form onSubmit={handleSubmit} className="mx-auto mb-0 mt-6 max-w-md space-y-4">
                     <div>
                         <label className="sr-only">Name</label>
                         <div className="relative">

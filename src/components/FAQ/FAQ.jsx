@@ -9,9 +9,9 @@ const FAQ = () => {
                 <h1 className='myHeading lg:text-5xl text-4xl'>Frequently Asked Questions</h1>
                 <p className=''>Here are answers to some common questions that might help you better understand how we work and how you can get involved.</p>
            </div>
-            <div className='grid md:grid-cols-2 grid-cols-1 gap-10 lg:w-3/4'>
+            <form className='grid md:grid-cols-2 grid-cols-1 gap-10 lg:w-3/4'>
                 <div className="collapse collapse-arrow bg-base-200">
-                <input type="radio" name="my-accordion-2" checked="checked" /> 
+                <input type="radio" name="my-accordion-2" defaultChecked="defaultChecked" /> 
                 <div className="collapse-title text-xl font-medium">
                 How does the platform work for donors?
                 </div>
@@ -20,7 +20,7 @@ const FAQ = () => {
                 </div>
             </div>
                 <div className="collapse collapse-arrow bg-base-200">
-                    <input type="radio" name="my-accordion-2" checked="checked" /> 
+                    <input type="radio" name="my-accordion-2" defaultChecked="defaultChecked" /> 
                     <div className="collapse-title text-xl font-medium">
                     {`How can I find surplus food if I'm in need?`}
                     </div>
@@ -29,7 +29,7 @@ const FAQ = () => {
                     </div>
                 </div>
                 <div className="collapse collapse-arrow bg-base-200">
-                    <input type="radio" name="my-accordion-2" checked="checked" /> 
+                    <input type="radio" name="my-accordion-2" defaultChecked="defaultChecked" /> 
                     <div className="collapse-title text-xl font-medium">
                     {`What kind of food items are typically available?`}
                     </div>
@@ -38,7 +38,7 @@ const FAQ = () => {
                     </div>
                 </div>
                 <div className="collapse collapse-arrow bg-base-200">
-                    <input type="radio" name="my-accordion-2" checked="checked" /> 
+                    <input type="radio" name="my-accordion-2" defaultChecked="defaultChecked" /> 
                     <div className="collapse-title text-xl font-medium">
                     Is there a cost involved in using the platform?
                     </div>
@@ -47,7 +47,7 @@ const FAQ = () => {
                     </div>
                 </div>
                 <div className="collapse collapse-arrow bg-base-200">
-                    <input type="radio" name="my-accordion-2" checked="checked" /> 
+                    <input type="radio" name="my-accordion-2" defaultChecked="defaultChecked" /> 
                     <div className="collapse-title text-xl font-medium">
                     {`How can I find surplus food if I'm in need?`}
                     </div>
@@ -56,7 +56,7 @@ const FAQ = () => {
                     </div>
                 </div>
                 <div className="collapse collapse-arrow bg-base-200">
-                    <input type="radio" name="my-accordion-2" checked="checked" /> 
+                    <input type="radio" name="my-accordion-2" defaultChecked="defaultChecked" /> 
                     <div className="collapse-title text-xl font-medium">
                     {`How can I find surplus food if I'm in need?`}
                     </div>
@@ -64,7 +64,7 @@ const FAQ = () => {
                         <p>Recipients can search for available surplus food based on location, type, or availability. Once a suitable listing is found, they can request the food and coordinate pickup or delivery with the donor.</p>
                     </div>
                 </div>
-                </div>
+                </form>
         </div>
     )}
 export default FAQ;

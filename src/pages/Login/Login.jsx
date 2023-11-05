@@ -1,8 +1,7 @@
 import { MdAlternateEmail } from 'react-icons/md';
 import { AiFillEye } from 'react-icons/ai';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-// import useAuth from '../../hook/useAuth';
-import { GrGoogle } from 'react-icons/gr';
+import useAuth from '../../hook/useAuth';
 import { enqueueSnackbar } from 'notistack';
 import Lottie from 'lottie-react';
 import loginAnimation from '../../assets/3DitT1SpXK.json'
@@ -11,38 +10,38 @@ import { FcGoogle } from 'react-icons/fc';
 
 const Login = () => {
 
-    // const {logIn,googleLogIn} = useAuth(); 
-    // const {state} = useLocation()
-    // const navigate = useNavigate();
+    const {logIn,googleLogIn} = useAuth(); 
+    const {state} = useLocation()
+    const navigate = useNavigate();
 
-    // const handleSubmit = e => {
-    //     e.preventDefault();
-    //     const form = e.target;
-    //     const email = form.email.value;
-    //     const password = form.password.value;
+    const handleSubmit = e => {
+        e.preventDefault();
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
         
-    //     logIn(email,password)
-    //     .then(async()=> {
-    //         enqueueSnackbar('Logged in successfully!',{variant:'success'})
-    //         navigate(state ? state : '/' )
-    //         form.reset();
-    //     })
-    //     .catch(err=>{
-    //         enqueueSnackbar(`${err}`,{variant:'error'})
-    //     })
-    // }
+        logIn(email,password)
+        .then(async()=> {
+            enqueueSnackbar('Logged in successfully!',{variant:'success'})
+            navigate(state ? state : '/' )
+            form.reset();
+        })
+        .catch(err=>{
+            enqueueSnackbar(`${err}`,{variant:'error'})
+        })
+    }
 
-    // const handleGoogle = () => {
-    //     googleLogIn()
-    //     .then(()=> {
-    //         enqueueSnackbar('Logged in successfully!',{variant:'success'})
-    //         navigate(state ? state : '/' )
-    //     })
-    //     .catch(err=>{
-    //         enqueueSnackbar(`${err}`,{variant:'error'})
-    //     })
+    const handleGoogle = () => {
+        googleLogIn()
+        .then(()=> {
+            enqueueSnackbar('Logged in successfully!',{variant:'success'})
+            navigate(state ? state : '/' )
+        })
+        .catch(err=>{
+            enqueueSnackbar(`${err}`,{variant:'error'})
+        })
         
-    // }
+    }
 
 
     return (
@@ -55,7 +54,7 @@ const Login = () => {
                         {`Your connection to our community begins here. Please enter your credentials to access your account and continue making a difference in our collective effort to reduce food waste and address hunger.`}
                     </p>
                 </div>
-                <button type="submit" className="w-96 mt-10 mx-auto flex items-center justify-center mb-6 md:mb-0 border  hover:border-gray-900 hover:bg-gray-900 text-2xl  p-3 rounded-lg font-bold  cursor-pointer transition ease-in duration-500">
+                <button onClick={handleGoogle} type="submit" className="w-96 mt-10 mx-auto flex items-center justify-center mb-6 md:mb-0 border  hover:border-gray-900 hover:bg-gray-900 text-2xl  p-3 rounded-lg font-bold  cursor-pointer transition ease-in duration-500">
                 <FcGoogle className='mr-3'/>
                                         
                                     <span>Google</span>
@@ -65,7 +64,7 @@ const Login = () => {
                     <h1 className='text-center'>or</h1>
                     <hr className='w-20 text-darkRed mt-px ml-2'/>
                 </div>
-                <form  className="mx-auto mb-0 mt-3 max-w-md space-y-4">
+                <form onSubmit={handleSubmit} className="mx-auto mb-0 mt-3 max-w-md space-y-4">
                     <div>
                         <label className="sr-only">Email</label>
                         <div className="relative">
