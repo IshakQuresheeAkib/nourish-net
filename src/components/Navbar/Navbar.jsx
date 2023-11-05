@@ -52,8 +52,8 @@ const Navbar = () => {
                         </span>)
                     }                      
                 </div>                                                                 
-                <button onClick={handleLogin} className="flex items-center pr-5 justify-center border-2 rounded-2xl border-red-600 cursor-pointer text-xl">                       
-                    <Lottie animationData={loginButton} className="w-10"></Lottie>                        
+                <button onClick={handleLogin} className="flex items-center justify-center border-2 rounded-2xl border-red-600 cursor-pointer text-xl w-36 h-11">                       
+                    {!user && <Lottie animationData={loginButton} className="pl-5 w-10"></Lottie>}                     
                     {user? 'Log out' : 'Log in'}
                 </button>
                 
