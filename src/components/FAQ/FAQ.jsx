@@ -3,7 +3,7 @@ import faq_animation from '../../assets/faq_animation.json'
 
 const FAQ = () => {
     return (
-        <div className="flex flex-col justify-center items-center my-28 lg:mx-20 mx-10">
+        <div className="flex flex-col justify-center items-center my-10 lg:mx-20 mx-10">
            <div className='lg:w-1/2 mb-10 mx-auto'>
                 <div className='lg:w-3/4 md:w-1/2 mx-auto'><Lottie animationData={faq_animation}></Lottie></div>
                 <h1 className='myHeading lg:text-5xl text-4xl'>Frequently Asked Questions</h1>

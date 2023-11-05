@@ -54,10 +54,9 @@ const Login = () => {
                         {`Your connection to our community begins here. Please enter your credentials to access your account and continue making a difference in our collective effort to reduce food waste and address hunger.`}
                     </p>
                 </div>
-                <button onClick={handleGoogle} type="submit" className="w-96 mt-10 mx-auto flex items-center justify-center mb-6 md:mb-0 border  hover:border-gray-900 hover:bg-gray-900 text-2xl  p-3 rounded-lg font-bold  cursor-pointer transition ease-in duration-500">
-                <FcGoogle className='mr-3'/>
-                                        
-                                    <span>Google</span>
+                <button onClick={handleGoogle} type="submit" className="w-80 mt-10 mx-auto flex items-center justify-center shadow-lg border border-orange-500/10 hover:text-white hover:bg-red-800 text-xl p-3 rounded-lg font-semibold cursor-pointer transition ease-in duration-500">
+                <FcGoogle className='mr-3'/>                                        
+                <span>Continue with Google</span>
                 </button>
                 <div className='flex items-center justify-center mx-auto mt-10'>
                     <hr className='w-20 text-darkRed mt-px mr-2'/>

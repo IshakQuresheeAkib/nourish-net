@@ -13,7 +13,7 @@ const Routes = () => {
              <div>
                     {pathname === '/' ? <Home></Home> : <Navbar></Navbar>}
                 </div> 
-             <div className=""><Outlet></Outlet></div>
+             <div className="my-24"><Outlet></Outlet></div>
              <Footer></Footer>
         </div>
     )}
