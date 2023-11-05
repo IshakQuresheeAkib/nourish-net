@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { GrGoogle } from 'react-icons/gr';
 import { enqueueSnackbar } from 'notistack';
 import Lottie from 'lottie-react';
-import loginAnimation from '../../assets/login-animation.json'
+import loginAnimation from '../../assets/3DitT1SpXK.json'
 
 const Login = () => {
 
@@ -46,10 +46,10 @@ const Login = () => {
     return (
         <div className='flex md:flex-row flex-col gap-10 items-center justify-center md:px-20 px-6 min-h-screen my-14'>
             <Lottie animationData={loginAnimation} className='md:w-1/2'></Lottie>
-            <div className='shadow-xl rounded-xl border h-[80vh] border-black/5 p-10'>
+            <div className='shadow-xl rounded-xl  h-[80vh] border-black/5 p-10'>
                 <div className="mx-auto max-w-2xl text-center">
                     <h1 className="myHeading w-fit mx-auto">Welcome Back!</h1>
-                    <p className="mt-4 text-gray-500">
+                    <p className="mt-6 text-gray-500">
                         {`Your connection to our community begins here. Please enter your credentials to access your account and continue making a difference in our collective effort to reduce food waste and address hunger.`}
                     </p>
                 </div>

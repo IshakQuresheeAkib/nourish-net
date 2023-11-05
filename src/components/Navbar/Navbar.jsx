@@ -55,7 +55,7 @@ const Navbar = () => {
                 <div className="flex items-center gap-5 md:mr-10">               
 
                    
-                    <button onClick={handleLogin} className="md:block hidden myBtn">
+                    <button onClick={handleLogin} className="md:block hidden myBtn ">
                     {user? 'Log out' : 'Log in'}
                     </button>
                 </div>
