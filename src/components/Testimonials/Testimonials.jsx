@@ -1,10 +1,10 @@
 const Testimonials = () => {
     return (
-        <div className=" my-36">
+        <div className="my-28 lg:mx-0 mx-10">
              <section className="">
-	<div className="container px-6 py-12 mx-auto">
+	<div className="container mx-auto">
 		<div className="grid items-center gap-4 xl:grid-cols-5">
-			<div className="max-w-2xl mx-auto my-8 space-y-4 text-center xl:col-span-2 xl:text-left">
+			<div className="max-w-2xl mx-auto my-8 space-y-4  xl:col-span-2 text-left">
 				<h2 className="myHeading">What People Are Saying About Our Service!</h2>
 				<p className="">Feel free to share your experiences, suggestions, or any concerns with us. Your voice matters, and your participation is pivotal in our collective mission to create a nourished and connected community.</p>
 			</div>

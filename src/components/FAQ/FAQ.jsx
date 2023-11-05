@@ -3,13 +3,13 @@ import faq_animation from '../../assets/faq_animation.json'
 
 const FAQ = () => {
     return (
-        <div className="flex flex-col justify-center items-center my-36">
-           <div className='w-1/2 mb-10 mx-auto'>
-                <div className='w-3/4 mx-auto'><Lottie animationData={faq_animation}></Lottie></div>
-                <h1 className='myHeading'>Frequently Asked Questions</h1>
+        <div className="flex flex-col justify-center items-center my-28 lg:mx-0 mx-10">
+           <div className='lg:w-1/2 mb-10 mx-auto'>
+                <div className='lg:w-3/4 md:w-1/2 mx-auto'><Lottie animationData={faq_animation}></Lottie></div>
+                <h1 className='myHeading lg:text-5xl text-4xl'>Frequently Asked Questions</h1>
                 <p className=''>Here are answers to some common questions that might help you better understand how we work and how you can get involved.</p>
            </div>
-            <div className='grid md:grid-cols-2 grid-cols-1 gap-10 w-3/4'>
+            <div className='grid md:grid-cols-2 grid-cols-1 gap-10 lg:w-3/4'>
                 <div className="collapse collapse-arrow bg-base-200">
                 <input type="radio" name="my-accordion-2" checked="checked" /> 
                 <div className="collapse-title text-xl font-medium">
