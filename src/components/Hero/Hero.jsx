@@ -10,6 +10,7 @@ const Hero = () => {
             <div className="absolute bottom-16 tracking-wider translate-left-1/2 lg:left-10 right-0 text-center px-5">
                 <h1 className="lg:text-6xl text-4xl font-semibold mb-5 myHeading w-fit mx-auto text-white ">Linking Surplus to Need: <p className="textStyle font-bold"> Less Waste, More Food, </p> Stronger Community!</h1>
                 <button className="myBtn py-3 px-9">Explore</button>
+                <button className="btn btn-outline py-3 px-9">Explore</button>
             </div>
             </div>
             </div>
