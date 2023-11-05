@@ -13,6 +13,7 @@ import ManageFoods from './pages/ManageFoods/ManageFoods'
 import FoodRequest from './pages/FoodRequest/FoodRequest'
 import ContactUs from './pages/ContactUs/ContactUs';
 import Login from './pages/Login/Login';
+import Signup from './pages/Signup/Signup';
 import ErrorElement from './ErrorElement/ErrorElement';
 import FAQ from './components/FAQ/FAQ';
 
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path:'/login',
         element:<Login></Login>
+      },
+      {
+        path:'/signup',
+        element:<Signup></Signup>
       }
     ]
   },

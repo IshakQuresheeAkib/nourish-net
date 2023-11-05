@@ -46,14 +46,14 @@ const Login = () => {
     return (
         <div className='flex md:flex-row flex-col gap-10 items-center justify-center md:px-20 px-6 min-h-screen my-14'>
             <Lottie animationData={loginAnimation} className='md:w-1/2'></Lottie>
-            <div className='shadow-xl rounded-xl border border-black/5 p-5'>
-                <div className="mx-auto max-w-lg text-center">
-                    <h1 className="text-2xl font-bold sm:text-3xl">Welcome Back!</h1>
+            <div className='shadow-xl rounded-xl border h-[80vh] border-black/5 p-10'>
+                <div className="mx-auto max-w-2xl text-center">
+                    <h1 className="myHeading w-fit mx-auto">Welcome Back!</h1>
                     <p className="mt-4 text-gray-500">
-                        {`Log in to your account to access your personalized dashboard, view your saved cars, and continue your car-buying journey.`}
+                        {`Your connection to our community begins here. Please enter your credentials to access your account and continue making a difference in our collective effort to reduce food waste and address hunger.`}
                     </p>
                 </div>
-                <form  className="mx-auto mb-0 mt-8 max-w-md space-y-4">
+                <form  className="mx-auto mb-0 mt-16 max-w-md space-y-4">
                     <div>
                         <label className="sr-only">Email</label>
                         <div className="relative">
@@ -83,7 +83,7 @@ const Login = () => {
                         </div>
                     </div>
                     <div className="flex items-center justify-between">                        
-                        <input type="submit" className="inline-block btn bg-gradient-to-br from-darkRed to-lightRed rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white" value='Log in'/>
+                        <input type="submit" className="inline-block myBtn" value='Log in'/>
                         <p className="text-sm text-gray-500">
                         No account?
                         <Link to='/signup' className="underline underline-offset-4" href="">Sign up</Link>

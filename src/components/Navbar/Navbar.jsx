@@ -35,18 +35,6 @@ const Navbar = () => {
             enqueueSnackbar('Logged Out Successfully!',{variant:'success'})
         })
     }
-
-    window.addEventListener("scroll", function () {
-        let navbar = document.querySelector('.navbar');
-        let banner = document.querySelector('.banner');
-        let scrollPosition = window.scrollY;
-      
-        if (scrollPosition > banner.clientHeight) {
-          navbar.classList.add('fixed', 'bg-gray-800'); // Apply fixed position and a different background color
-        } else {
-          navbar.classList.remove('fixed', 'bg-gray-800'); // Remove fixed position and the background color
-        }
-      });
       
    
     return (
@@ -59,7 +47,7 @@ const Navbar = () => {
 
                     {
                         navbarItems.map(navbarItem => <span key={navbarItem.id}  className=" group items-center bg-transparent cursor-default ">
-                                <NavLink  to={navbarItem.link} className={`text-center font-semibold text-lg relative  after:transition-transform after:duration-700 after:ease-in-out after:absolute after:-bottom-1 after:left-0 after:block after:h-[3.5px] after:w-full after:origin-bottom-right after:scale-x-0 after:myColor after:content-[''] after:group-hover:origin-bottom-left after:group-hover:scale-x-100 `}>{navbarItem.title}</NavLink>
+                                <NavLink  to={navbarItem.link} className={`text-center font-bold text-lg relative  after:transition-transform after:duration-700 after:ease-in-out after:absolute after:-bottom-1 after:left-0 after:block after:h-[3.5px] after:w-full after:origin-bottom-right after:scale-x-0 after:myColor after:content-[''] after:group-hover:origin-bottom-left after:group-hover:scale-x-100 `}>{navbarItem.title}</NavLink>
                         </span>)
                     }                      
                 </div>
@@ -67,7 +55,7 @@ const Navbar = () => {
                 <div className="flex items-center gap-5 md:mr-10">               
 
                    
-                    <button onClick={handleLogin} className="md:block hidden myBtn text-white ">
+                    <button onClick={handleLogin} className="md:block hidden myBtn">
                     {user? 'Log out' : 'Log in'}
                     </button>
                 </div>

@@ -14,7 +14,7 @@
         @apply bg-clip-text text-transparent myColor
     }
     .myBtn{
-      @apply myColor px-5 py-2 active:scale-95 text-xl transition-all duration-200 rounded-md 
+      @apply myColor px-5 py-2 active:scale-95 text-xl transition-all duration-200 rounded-md text-white font-semibold cursor-pointer
     }
     .myColor{
         @apply bg-gradient-to-r from-orange-600  via-red-600 to-red-800 
