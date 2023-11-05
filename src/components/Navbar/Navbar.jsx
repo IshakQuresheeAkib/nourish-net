@@ -18,7 +18,7 @@ const Navbar = () => {
         { id: 10, title: 'Add Food', link: '/add-food'},
         { id: 3, title: 'Manage My Foods ', link: '/manage-my-foods' },
         { id: 4, title: 'My Food Request', link: '/my-food-request' },
-        { id: 7, title: 'Contact Us', link: '/contact-us'}
+        { id: 7, title: 'FAQ', link: '/faq'}
       ];
 
     AOS.init({

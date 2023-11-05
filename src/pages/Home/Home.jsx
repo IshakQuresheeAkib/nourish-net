@@ -9,7 +9,7 @@ const Home = () => {
              <Hero></Hero>
              <FAQ></FAQ>
              <Testimonials></Testimonials>
-             <Footer></Footer>
+             
         </div>
     )}
 export default Home;

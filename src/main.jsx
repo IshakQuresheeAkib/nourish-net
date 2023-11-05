@@ -14,6 +14,7 @@ import FoodRequest from './pages/FoodRequest/FoodRequest'
 import ContactUs from './pages/ContactUs/ContactUs';
 import Login from './pages/Login/Login';
 import ErrorElement from './ErrorElement/ErrorElement';
+import FAQ from './components/FAQ/FAQ';
 
 const router = createBrowserRouter([
   {
@@ -42,8 +43,8 @@ const router = createBrowserRouter([
         element:<FoodRequest></FoodRequest>
       },
       {
-        path:'/contact-us',
-        element:<ContactUs></ContactUs>
+        path:'/faq',
+        element:<FAQ></FAQ>
       },
       {
         path:'/login',
