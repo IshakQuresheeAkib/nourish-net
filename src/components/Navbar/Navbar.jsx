@@ -48,7 +48,7 @@ const Navbar = () => {
 
                     {
                         navbarItems.map(navbarItem => <span key={navbarItem.id}  className=" group items-center bg-transparent cursor-default ">
-                                <NavLink  to={navbarItem.link} className={`text-center font-bold text-lg relative  after:transition-transform after:duration-700 after:ease-in-out after:absolute after:-bottom-1 after:left-0 after:block after:h-[3.5px] after:w-full after:origin-bottom-right after:scale-x-0 after:myColor after:content-[''] after:group-hover:origin-bottom-left after:group-hover:scale-x-100 `}>{navbarItem.title}</NavLink>
+                                <NavLink  to={navbarItem.link} className={`text-center font-bold relative  after:transition-transform after:duration-700 after:ease-in-out after:absolute after:-bottom-1 after:left-0 after:block after:h-[3.5px] after:w-full after:origin-bottom-right after:scale-x-0 after:myColor after:content-[''] after:group-hover:origin-bottom-left after:group-hover:scale-x-100 `}>{navbarItem.title}</NavLink>
                         </span>)
                     }                      
                 </div>                                                                 
