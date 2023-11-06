@@ -48,11 +48,11 @@ const Navbar = () => {
 
                     {
                         navbarItems.map(navbarItem => <span key={navbarItem.id}  className=" group items-center bg-transparent cursor-default ">
-                                <NavLink  to={navbarItem.link} className={`text-center font-bold relative  after:transition-transform after:duration-700 after:ease-in-out after:absolute after:-bottom-[3.5px] after:left-0 after:block after:h-[3.5px] after:w-full after:origin-bottom-right after:scale-x-0 after:myColor after:content-[''] after:group-hover:origin-bottom-left after:group-hover:scale-x-100 `}>{navbarItem.title}</NavLink>
+                                <NavLink  to={navbarItem.link} className={`text-center font-bold relative  after:transition-transform after:duration-700 after:ease-in-out after:absolute after:-bottom-[3.1px] after:left-0 after:block after:h-[3px] after:w-full after:origin-bottom-right after:scale-x-0 after:myColor after:content-[''] after:group-hover:origin-bottom-left after:group-hover:scale-x-100 `}>{navbarItem.title}</NavLink>
                         </span>)
                     }                      
                 </div>                                                                 
-                <button onClick={handleLogin} className={`flex items-center justify-center border-2 rounded-2xl border-red-600 cursor-pointer text-xl w-36 h-11 ${!user && 'pr-5'}`}>                       
+                <button onClick={handleLogin} className={`flex items-center justify-center border-2 rounded-2xl hover:text-red-700 border-red-600 cursor-pointer text-xl w-36 h-11 ${!user && 'pr-5'}`}>                       
                     {!user && <Lottie animationData={loginButton} className="w-11"></Lottie>}                     
                     <span>{user? 'Log out' : 'Log in'}</span>
                 </button>

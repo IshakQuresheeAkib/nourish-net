@@ -61,7 +61,7 @@ const AuthProvider = ({children}) => {
 
     return (
     <AuthContext.Provider value={authInfo}>
-        <SnackbarProvider autoHideDuration={1500} anchorOrigin={{horizontal:'center',vertical:'top'}} style={{fontWeight:'600',fontSize:'16px'}} preventDuplicate={true}>
+        <SnackbarProvider autoHideDuration={2000} anchorOrigin={{horizontal:'center',vertical:'top'}} style={{fontWeight:'600',fontSize:'16px'}} preventDuplicate={true}>
                 {children}                
             </SnackbarProvider>
     </AuthContext.Provider>
