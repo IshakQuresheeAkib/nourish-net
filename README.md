@@ -6,6 +6,7 @@ Live site: [https://nourish-net.web.app](https://nourish-net.web.app)
 
 <h1>Features:</h1>
 <hr/>
+-Offer a user-friendly interface where users can view their donation and request history, manage their profile, and track ongoing donation or request statuses.
 
 -Allow users to sign up, create profiles, and manage their donation or request of food history.
 
@@ -15,9 +16,7 @@ Live site: [https://nourish-net.web.app](https://nourish-net.web.app)
 
 -Implement a system to search surplus food donations by name and expire date.
 
--Offer a user-friendly interface where users can view their donation and request history, manage their profile, and track ongoing donation or request statuses.
 
 -To ensure security and accountability, my website offers an authentication system. Users are required to sign in to access certain routes,show details about food,manage and request food. This helps maintain trust and control over the listings.
-
 
 -My website is designed to be fully responsive on mobile and tablet devices, ensuring that users can easily access and navigate the platform from their smartphones. This responsiveness enhances accessibility and user experience across various screen sizes.
