@@ -18,13 +18,13 @@ const FoodsCard = ({food}) => {
                 <div className=" pb-2 bg-white rounded-md shadow-xl z-10 ">
                     <div className="relative rounded-md">
                         <img src={foodImage} className=" w-96 h-64 object-cover rounded-t-md" alt=""/>
-                        <div className="bottom-0 right-0 mb-2 mr-2 px-2 rounded-md absolute bg-orange-500 text-gray-100 text-xs font-medium">Food for: {foodQuantity} Person</div>
+                        <div className="bottom-0 right-0 mb-2 mr-2 px-2 rounded-md absolute bg-orange-600 text-gray-100 text-xs font-medium">Food for: {foodQuantity} Person</div>
                     </div>
-                    <div className="px-4 pb-10 flex flex-col justify-between h-64 gap-3 text-left">
+                    <div className="px-4 mb-14 flex flex-col justify-between h-64 gap-3 text-left">
                         {/* <!-- food Title --> */}
                         <div className="text-lg text-black/80 font-bold ">{foodName}</div>
                         <div className="flex gap-3 items-center">
-                            <img src={donatorImage} className="w-10 h-10 avatar object-cover rounded-full" alt="" />
+                            <img src={donatorImage} className="h-11 w-11 rounded-full " alt="" />
                             <div className="text-sm">
                             <p>Donated By:</p>
                             <p className="font-semibold">{donatorName}</p>
@@ -36,11 +36,11 @@ const FoodsCard = ({food}) => {
                                 <p className="bg-gray-200 p-2 mr-2 rounded-full text-xs font-light text-gray-900">Expired in: {expiredDateTime}</p>
                             </div>
                         </div>
-                        <div className="text-xs font-semibold ">
+                        <div className="text-xs font-semibold">
                             <h3>Pickup Location: {pickupLocation}</h3>
                             <p className="text-sm font-normal text-left pt-2 pb-10">{additionalNotes}</p>
                         </div>
-                        <button onClick={handleDetails} className="myBtn absolute bottom-5 w-80 ">View Details</button>
+                        <button onClick={handleDetails} className="myBtn absolute bottom-8 w-80 mx-auto">View Details</button>
                     </div>
                 </div>
             </div> 

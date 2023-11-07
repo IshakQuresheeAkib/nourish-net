@@ -6,6 +6,7 @@ import { enqueueSnackbar } from 'notistack';
 import Lottie from 'lottie-react';
 import loginAnimation from '../../assets/3DitT1SpXK.json'
 import { FcGoogle } from 'react-icons/fc';
+import { Helmet } from 'react-helmet-async';
 
 
 const Login = () => {
@@ -72,6 +73,7 @@ const Login = () => {
                                 name='email'
                                 className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                                 placeholder="Enter email"
+                                required
                             />
                             <span className="absolute inset-y-0 text-xl end-0 grid place-content-center px-4">
                                 <MdAlternateEmail></MdAlternateEmail>
@@ -86,6 +88,7 @@ const Login = () => {
                                 name="password"
                                 className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                                 placeholder="Enter password"
+                                required
                             />
                             <span className="absolute text-xl inset-y-0 end-0 grid place-content-center px-4">
                                 <AiFillEye></AiFillEye>
@@ -101,7 +104,9 @@ const Login = () => {
                     </div>            
                     
                 </form>
-                
+                <Helmet>
+                    <title>NourishNet | Log in</title>
+                </Helmet>
             </div> 
         </div>                           
     );

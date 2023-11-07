@@ -28,8 +28,8 @@
         "foodName": "Canned Soup Collection",
         "donatorImage": "https://i.ibb.co/Mfm36yQ/ana-nichita-BI91-Nrpp-E38-unsplash.jpg",
         "donatorName": "Sophia Martinez",
-        "donatorEmail": "sophia@gmail.com",
-        "foodQuantity": 4,
+        "donatorEmail": "mama@mami.com",
+        "foodQuantity": 9,
         "pickupLocation": "789 Pine Road, City C, State",
         "expiredDateTime": "10-12-2023",
         "additionalNotes": "Various canned soups. Ensure to collect before the expiration date.",
@@ -76,8 +76,8 @@
         "foodName": "Vegetable Soup",
         "donatorImage": "https://i.ibb.co/ZgD2L3t/redd-f-pz-OUnvx9c1-E-unsplash.jpg",
         "donatorName": "Mia Rodriguez",
-        "donatorEmail": "mia@gmail.com",
-        "foodQuantity": 2,
+        "donatorEmail": "akibqureshee11@gmail.com",
+        "foodQuantity": 12,
         "pickupLocation": "789 Elm Lane, City C, State",
         "expiredDateTime": "01-12-2023",
         "additionalNotes": "Homemade vegetable soup. Ready to heat and eat.",
@@ -96,11 +96,11 @@
       "foodStatus": "Available"
     },
     {
-        "foodImage": "https://i.ibb.co/MnVYqZvdonatorferent-types-porridge-with-vegetables-plate-with-rice-bowls-table-1.jpg",
+        "foodImage": "https://i.ibb.co/MnVYqZv/different-types-porridge-with-vegetables-plate-with-rice-bowls-table-1.jpg",
         "foodName": "Rice and Beans Combo",
         "donatorImage": "https://i.ibb.co/xfLVTwQ/mitchell-luo-CMng5-Bz-Pv1o-unsplash.jpg",
         "donatorName": "Ava Smith",
-        "donatorEmail": "ava@gmail.com",
+        "donatorEmail": "akibqureshee11@gmail.com",
         "foodQuantity": 6,
         "pickupLocation": "321 Elm Street, City A, State",
         "expiredDateTime": "14-12-2023",
@@ -119,5 +119,5 @@
         "additionalNotes": "Delightful assortment of cupcakes. A sweet treat for any occasion.",
         "foodStatus": "Available"
     },
-    {"foodName":"Chowmin","foodImage":"https://i.ibb.co/5LzYMMm/ben-lei-fl-Fd8-L7-B3g-unsplash-1.jpg","foodQuantity":3,"donatorEmail":"akibqureshee11@gmail.com","donatorImage":"https://lh3.googleusercontent.com/a/ACg8ocKuCEZsjfVs93P1LgR-I0Fpp42gj0fkWYLP6_0uKzPVZhPg=s96-c","donatorName":"AKIB QURESHEE","pickupLocation":"Sylhet Sadar,Sylhet.","expiredDateTime":"2023-11-14","additionalNotes":"very tasty","foodStatus":"available"}
+    {"foodName":"Oven Baked Pasta","foodImage":"https://i.ibb.co/5LzYMMm/ben-lei-fl-Fd8-L7-B3g-unsplash-1.jpg","foodQuantity":3,"donatorEmail":"akibqureshee11@gmail.com","donatorImage":"https://lh3.googleusercontent.com/a/ACg8ocKuCEZsjfVs93P1LgR-I0Fpp42gj0fkWYLP6_0uKzPVZhPg=s96-c","donatorName":"AKIB QURESHEE","pickupLocation":"Sylhet Sadar,Sylhet.","expiredDateTime":"2023-11-14","additionalNotes":"very tasty","foodStatus":"available"}
   ]

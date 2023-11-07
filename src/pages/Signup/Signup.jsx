@@ -7,16 +7,17 @@ import useAuth from '../../hook/useAuth';
 import { enqueueSnackbar } from 'notistack';
 import Lottie from 'lottie-react';
 import createAccount from '../../assets/klRshCwrAK.json'
+import { Helmet } from 'react-helmet-async';
 
 const Signup = () => {
 
-    const {createUser} = useAuth();
+    const {createUser,setProfile} = useAuth();
 
     const handleSubmit = e => {
         e.preventDefault();
         const form = e.target;
         const name = form.name.value;
-        const photo = form.email.value;
+        const photo = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
         const newUser = {email,password};
@@ -33,7 +34,13 @@ const Signup = () => {
 
         createUser(email,password)
         .then(()=>{
-            enqueueSnackbar('Account created successfully!',{variant:'success'})
+            setProfile(name,photo)
+            .then(()=>{
+                enqueueSnackbar('Account created successfully!',{variant:'success'})
+            })
+            .catch(err=>{
+                enqueueSnackbar(`${err}`,{variant:'error'})
+            })        
         })
         .catch(err=>{
             enqueueSnackbar(`${err}`,{variant:'error'})
@@ -42,6 +49,9 @@ const Signup = () => {
 
     return (
         <div className='flex md:flex-row flex-col gap-10 items-center justify-center md:px-20 px-6 min-h-screen my-14'>
+            <Helmet>
+                    <title>NourishNet | Sign Up</title>
+                </Helmet>
             <Lottie animationData={createAccount} className='md:w-1/2'></Lottie>
             <div className='shadow-xl rounded-xl border-black/5 p-10'>
                 <div className="mx-auto max-w-2xl text-center">
@@ -59,6 +69,7 @@ const Signup = () => {
                                 name='name'
                                 className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                                 placeholder="Name"
+                                required
                             />
                             <span className="absolute inset-y-0 text-xl end-0 grid place-content-center px-4">
                                 <CiUser/>
@@ -87,6 +98,7 @@ const Signup = () => {
                                 name='email'
                                 className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                                 placeholder="Email"
+                                required
                             />
                             <span className="absolute inset-y-0 text-xl end-0 grid place-content-center px-4">
                                 <MdAlternateEmail></MdAlternateEmail>
@@ -101,6 +113,7 @@ const Signup = () => {
                                 name="password"
                                 className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                                 placeholder="Password"
+                                required
                             />
                             <span className="absolute text-xl inset-y-0 end-0 grid place-content-center px-4">
                                 <AiFillEye></AiFillEye>

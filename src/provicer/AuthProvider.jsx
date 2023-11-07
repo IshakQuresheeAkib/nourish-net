@@ -1,11 +1,14 @@
-import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase";
 import { SnackbarProvider  } from "notistack";
+import axios from "axios";
+import { HelmetProvider } from "react-helmet-async";
 // import axios from "axios";
  
 export const AuthContext = createContext(null)
 const googleProvider = new GoogleAuthProvider();
+const helmetContext = {};
 
 const AuthProvider = ({children}) => {
 
@@ -15,6 +18,10 @@ const AuthProvider = ({children}) => {
     const createUser = (email,password) => {
         setLoading(true);
         return createUserWithEmailAndPassword(auth,email,password)
+    }
+
+    const setProfile = (displayName,photoURL) =>{
+        return updateProfile(auth.currentUser,{displayName,photoURL})
     }
 
     const logIn = (email,password) => {
@@ -37,15 +44,15 @@ const AuthProvider = ({children}) => {
             const loggedUser = {email:userEmail}
             console.log(currentUser);
             setUser(currentUser)
+            if (currentUser) {
+                axios.post('https://assignment-11-server-bice-zeta.vercel.app/jwt',loggedUser,{ withCredentials:true })
+                .then(data=>console.log(data.data))
+            }
+            else{
+                axios.post('https://assignment-11-server-bice-zeta.vercel.app/logout',loggedUser,{withCredentials:true})
+                .then(result=>console.log(result.data))
+            }
             setLoading(false)
-            // if (currentUser) {
-            //     axios.post('https://new-car-canvas-server.vercel.app/jwt',loggedUser,{ withCredentials:true })
-            //     .then(data=>console.log(data.data))
-            // }
-            // else{
-            //     axios.post('https://new-car-canvas-server.vercel.app/logout',loggedUser,{withCredentials:true})
-            //     .then(result=>console.log(result.data))
-            // }
         })
         return () => unSubscribe();
     },[user?.email])
@@ -56,13 +63,16 @@ const AuthProvider = ({children}) => {
         createUser,
         logIn,
         logOut,
-        googleLogIn
+        googleLogIn,
+        setProfile
     }
 
     return (
     <AuthContext.Provider value={authInfo}>
         <SnackbarProvider autoHideDuration={2000} anchorOrigin={{horizontal:'center',vertical:'top'}} style={{fontWeight:'600',fontSize:'16px'}} preventDuplicate={true}>
-                {children}                
+        <HelmetProvider context={helmetContext}>
+            {children}
+        </HelmetProvider>                               
             </SnackbarProvider>
     </AuthContext.Provider>
     );

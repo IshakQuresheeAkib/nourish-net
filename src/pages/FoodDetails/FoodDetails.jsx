@@ -1,43 +1,71 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Loader from "../../components/Loader/Loader";
 import useAuth from "../../hook/useAuth";
+import { enqueueSnackbar } from "notistack";
+import useAxiosSecure from "../../hook/useAxiosSecure";
+import CurrentDate from "../../components/CurrentDate/CurrentDate";
+import { Helmet } from "react-helmet-async";
 
 const FoodDetails = () => {
     const {id} = useParams();
     const {user} = useAuth();
+    const axiosSecure = useAxiosSecure();
+    const navigate = useNavigate();
 
-    const { isLoading, data } = useQuery({
+    const { isLoading, data,refetch } = useQuery({
         queryKey: ['foodData'],
-        queryFn: () => axios.get(`http://localhost:5000/available-foods/${id}`)
+        queryFn: () => axiosSecure.get(`/available-foods/${id}?email=${user?.email}`)
       })
 
+      
+
       if (isLoading) {
-        <Loader></Loader>
+        return <Loader></Loader>
       }
 
       const foodDetails = data && data?.data
 
-      const {foodImage,foodQuantity,foodName,expiredDateTime,pickupLocation,additionalNotes,donatorImage,donatorName,donatorEmail} = foodDetails || {}
+      const {foodImage,foodQuantity,foodName,expiredDateTime,pickupLocation,additionalNotes,donatorImage,donatorName,donatorEmail,foodStatus} = foodDetails || {}
 
-      const currentDate = new Date();
-      const day = currentDate.getDate();
-      const month = currentDate.getMonth() + 1;
-      const year = currentDate.getFullYear();
-      
-      const date = `${day}-${month}-${year}`;
-
+      const currentDate = CurrentDate();
 
       const handleRequest = (e)=>{
         e.preventDefault();
         const form = e.target
-        console.log({...foodDetails,userEmail:user?.email,date,additionalNotes:form.notes.value});
+        const donationMoney = form.donationMoney.value;
+        const updatedNotes = form.updatedNotes.value;
+        const userName= user?.displayName
+        const userEmail= user?.email
+        const userPhoto= user?.photoURL
+        const foodRequest = {foodImage,foodName,expiredDateTime,pickupLocation,donatorImage,donatorName,donatorEmail,userEmail,userName,userPhoto,currentDate,additionalNotes:updatedNotes,donationMoney,foodStatus}
+        
+        axiosSecure.post('/requested-food',foodRequest)
+        .then(result=>{
+        console.log(result.data);
+        if (result.data.insertedId) {
+            enqueueSnackbar(`You've Requested ${foodName} Successfully!`,{variant:'success',autoHideDuration:4000})
+            refetch();
+        }
+    })
+
+        axios.patch('https://assignment-11-server-bice-zeta.vercel.app/available-foods',{id,foodQuantity})
+        .then(result=>  {
+            if (result.data?.deletedCount) {
+                navigate('/available-foods')
+                enqueueSnackbar(`${foodName} isn't available now!`,{autoHideDuration:4000})
+            }
+            refetch()
+        })
       }
 
     return (
         <div className="px-20">
-            <div className="hero min-h-screen">
+            <Helmet>
+                <title>NourishNet | Food Details</title>
+            </Helmet>
+            <div className="hero ">
                 <div className="hero-content flex-col lg:flex-row gap-10">
                     <img src={foodImage} className="max-w-xl rounded-lg shadow-xl" />
                     <div>
@@ -49,16 +77,17 @@ const FoodDetails = () => {
                         <li className="list-inside list-disc">Additional information: {additionalNotes}</li>
                     </ul>
                     <div className="flex gap-3 items-center mt-6">
-                            <img src={donatorImage} className="w-20 h-20 avatar rounded-full" alt="" />
+                            <img src={donatorImage} className="w-20 h-20 rounded-full" alt="" />
                             <div className="text-sm">
                             <p>Donated By:</p>
                             <p className="font-semibold">{donatorName}</p>
+                            <small>Contact: {donatorEmail}</small>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <button onClick={()=>document.getElementById('my_modal_5').showModal()} className="flex justify-center w-fit mx-auto myBtn">Request for Food</button>
+            <button onClick={()=>document.getElementById('my_modal_5').showModal()} className="flex justify-center w-fit mx-auto myBtn my-14">Request for Food</button>
             <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle w-1/2 mx-auto">
             <div className="modal-box">
                 {
@@ -101,11 +130,11 @@ const FoodDetails = () => {
                     </div>
                     <div className="flex flex-col">
                     <label htmlFor="modalText" className="text-xs">Additional Notes:</label>
-                    <textarea type="text" name='notes' defaultValue={additionalNotes} className="w-80 p-2 bg-slate-100 text-sm rounded-md"/>
+                    <textarea type="text" name='updatedNotes' defaultValue={additionalNotes} className="w-80 p-2 bg-slate-100 text-sm rounded-md"/>
                     </div>
                     <div className="flex flex-col">
-                    <label htmlFor="modalText" className="text-xs">Donation Money:</label>
-                    <input type="text" name='modalText' className="w-80 p-2  bg-slate-100 text-sm rounded-md"/>
+                    <label htmlFor="modalText" className="text-xs">Donation Money: <small>($)</small> </label>
+                    <input type="number" name='donationMoney' className="w-80 p-2  bg-slate-100 text-sm rounded-md"/>
                     </div>
                     <input type="submit" className="myBtn w-36" value='Request'/>
                 </form>
@@ -121,3 +150,4 @@ const FoodDetails = () => {
         </div>
     )}
 export default FoodDetails;
+

@@ -8,7 +8,6 @@ import "./index.css";
 import Routes from './routes/Routes';
 import AvailableFoods from './pages/Availablefoods/AvailableFoods'
 import AddFood from './pages/Addfood/AddFood'
-import ManageFoods from './pages/ManageFoods/ManageFoods'
 import FoodRequest from './pages/FoodRequest/FoodRequest'
 import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
@@ -18,6 +17,8 @@ import AuthProvider from './provicer/AuthProvider';
 import PrivateRoutes from './routes/PrivateRoutes/PrivateRoutes';
 import FoodDetails from './pages/FoodDetails/FoodDetails';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import RequestedFood from './pages/RequestedFood/RequestedFood';
+import ManageFoods from './pages/Managefoods/ManageFoods';
 
 
 const queryClient = new QueryClient()
@@ -31,7 +32,6 @@ const router = createBrowserRouter([
     children:[
       {
         path:'/available-foods',
-        loader:()=>fetch('http://localhost:5000/available-foods'),
         element:<AvailableFoods></AvailableFoods>
       },
       {
@@ -61,6 +61,10 @@ const router = createBrowserRouter([
       {
         path:'/signup',
         element:<Signup></Signup>
+      },
+      {
+        path:'/requested-food',
+        element:<PrivateRoutes><RequestedFood></RequestedFood></PrivateRoutes>
       }
     ]
   },
