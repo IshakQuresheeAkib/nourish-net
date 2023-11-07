@@ -61,13 +61,13 @@ const FoodDetails = () => {
       }
 
     return (
-        <div className="px-20">
+        <div className="md:px-20">
             <Helmet>
                 <title>NourishNet | Food Details</title>
             </Helmet>
             <div className="hero ">
                 <div className="hero-content flex-col lg:flex-row gap-10">
-                    <img src={foodImage} className="max-w-xl rounded-lg shadow-xl" />
+                    <img src={foodImage} className="md:max-w-xl max-w-sm rounded-lg shadow-xl" />
                     <div>
                     <h1 className="myHeading">{foodName}</h1>
                     <ul>
@@ -88,7 +88,7 @@ const FoodDetails = () => {
                 </div>
             </div>
             <button onClick={()=>document.getElementById('my_modal_5').showModal()} className="flex justify-center w-fit mx-auto myBtn my-14">Request for Food</button>
-            <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle w-1/2 mx-auto">
+            <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle lg:w-1/2 mx-auto px-2">
             <div className="modal-box">
                 {
                     foodDetails && <form onSubmit={handleRequest} className="flex flex-col gap-4">

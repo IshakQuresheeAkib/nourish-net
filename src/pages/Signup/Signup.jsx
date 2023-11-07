@@ -24,13 +24,13 @@ const Signup = () => {
         console.log(newUser);
 
 
-        // if (!/(?=.*[!#$%&?^*@~() "])/.test(password)) {
-        //     return enqueueSnackbar('Password should have a special character!',{variant:'error'})
-        // }else if (!/[A-Z]/.test(password)) {
-        //     return enqueueSnackbar('Password should have a capital letter !',{variant:'error'})
-        // }else if(!/(?=.{8,})/.test(password)){
-        //     return enqueueSnackbar('Password should have minimum six character !',{variant:'error'})
-        // }
+        if (!/(?=.*[!#$%&?^*@~() "])/.test(password)) {
+            return enqueueSnackbar('Password should have a special character!',{variant:'error'})
+        }else if (!/[A-Z]/.test(password)) {
+            return enqueueSnackbar('Password should have a capital letter !',{variant:'error'})
+        }else if(!/(?=.{8,})/.test(password)){
+            return enqueueSnackbar('Password should have minimum six character !',{variant:'error'})
+        }
 
         createUser(email,password)
         .then(()=>{
@@ -48,11 +48,11 @@ const Signup = () => {
     }
 
     return (
-        <div className='flex md:flex-row flex-col gap-10 items-center justify-center md:px-20 px-6 min-h-screen my-14'>
+        <div className='flex lg:flex-row flex-col gap-10 items-center justify-center md:px-20 px-6 min-h-screen my-14'>
             <Helmet>
                     <title>NourishNet | Sign Up</title>
                 </Helmet>
-            <Lottie animationData={createAccount} className='md:w-1/2'></Lottie>
+            <Lottie animationData={createAccount} className='lg:w-1/2'></Lottie>
             <div className='shadow-xl rounded-xl border-black/5 p-10'>
                 <div className="mx-auto max-w-2xl text-center">
                     <h1 className="myHeading w-fit mx-auto">Get started today!</h1>

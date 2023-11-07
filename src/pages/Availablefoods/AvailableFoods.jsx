@@ -45,16 +45,17 @@ const AvailableFoods = () => {
                 <title>NourishNet | Available Foods</title>
             </Helmet>
              <h1 className="myHeading text-center w-fit mx-auto">Available Foods: {foods ? foods?.length : <Loader></Loader>}</h1>
-             <div className="flex justify-center mx-auto  mt-7 gap-10">
+             <p className="lg-w-1/2 mx-auto text-center pt-3 pb-7">More Food for All, Fighting Hunger: Sharing Extra Goodness for Everyone in Need, Bringing Smiles!</p>
+             <div className="flex justify-center md:flex-row flex-col items-center mx-auto  mt-7 gap-10">
                 <div className="form-control">
                     <label className="label cursor-pointer">
-                        <span className="label-text">Sort By Expire Date</span> 
+                        <span className="label-text mr-3">Sort By Expire Date</span> 
                         <input type="checkbox" className="checkbox" ref={checkboxRef} onChange={handleCheckboxChange}/>
                     </label>
                 </div>
                 <form className="form-control"  onSubmit={handleSubmit}>
                     <div className="input-group">
-                        <input type="text" placeholder="Search…" name='search' className="input input-bordered" />
+                        <input type="text" placeholder="Search…" name='search' className="input input-bordered " />
                         <button type="submit" className="btn btn-square">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                         </button>

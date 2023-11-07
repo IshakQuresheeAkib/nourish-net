@@ -80,7 +80,7 @@ const RequestedFood = () => {
                                 <td>{request.userEmail}</td>
                                 <td>{request?.currentDate}</td>
                                 <th>
-                                <button onClick={()=>handleStatus({id:request._id,name:request.foodName})} className="myBtn text-xs">{request?.foodStatus.toUpperCase()}</button>
+                                <button onClick={()=>handleStatus({id:request._id,name:request.foodName})} className="myBtn text-xs">{request?.foodStatus === 'Delivered' ? 'Delivered' : 'Pending'}</button>
                                 </th>
                             </tr>)
                         }

@@ -20,8 +20,9 @@ const FeaturedCards = () => {
 
     return (
         <div className="max-w-7xl mx-auto my-28">
-             <h1 className="myHeading mb-20 mx-auto text-center w-fit">Featured Foods</h1>
-             <div className="flex gap-10 flex-wrap">
+             <h1 className="myHeading  mx-auto text-center w-fit">Featured Foods</h1>
+             <p className="mb-20 lg:w-1/2 text-center mx-auto pt-4">Big Portions for Those in Need: Serving Up More Goodness, One Hearty Meal at a Time - Offering a Variety of Food, Sorted by How Much You Get!</p>
+             <div className="flex gap-10 flex-wrap justify-center">
              {
                 cards?.data && cards?.data?.map(food=><FoodsCard key={food._id} food={food}></FoodsCard>) 
              }
