@@ -65,7 +65,7 @@ const FoodRequest = () => {
                                 </div>
                                 </td>
                                 <td>{request.pickupLocation}</td>
-                                <td>{request?.expiredDateTime}</td>
+                                <td>{request?.expiredDateTime.slice(0,10)}</td>
                                 <td>{request?.currentDate}</td>
                                 <td>$ {request?.donationMoney}</td>
                                 <td>{request?.foodStatus}</td>

@@ -73,7 +73,7 @@ const FoodDetails = () => {
                     <ul>
                         <li className="list-inside list-disc">Food for: {foodQuantity} Person</li>
                         <li className="list-inside list-disc">Pickup Location: {pickupLocation}</li>
-                        <li className="list-inside list-disc">Expired Date: {expiredDateTime}</li>
+                        <li className="list-inside list-disc">Expired Date: {expiredDateTime.slice(0,10)}</li>
                         <li className="list-inside list-disc">Additional information: {additionalNotes}</li>
                     </ul>
                     <div className="flex gap-3 items-center mt-6">
@@ -126,7 +126,7 @@ const FoodDetails = () => {
                     </div>
                     <div className="flex flex-col">
                     <label htmlFor="modalText" className="text-xs">Expire Date:</label>
-                    <input type="text" value={expiredDateTime} disabled className="w-80 p-2  bg-slate-100 text-sm rounded-md"/>
+                    <input type="text" value={expiredDateTime.slice(0,10)} disabled className="w-80 p-2  bg-slate-100 text-sm rounded-md"/>
                     </div>
                     <div className="flex flex-col">
                     <label htmlFor="modalText" className="text-xs">Additional Notes:</label>

@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet-async";
 
 const AddFood = () => {
 
+
     const {user} = useAuth();
 
     const handleAddProduct = e => {
@@ -22,7 +23,7 @@ const AddFood = () => {
         const foodStatus = form.foodStatus.value;
 
 
-        const food = {foodName,foodImage,foodQuantity:parseInt(foodQuantity),donatorEmail,donatorImage,donatorName,pickupLocation,expiredDateTime,additionalNotes,foodStatus}
+        const food = {foodName,foodImage,foodQuantity:parseInt(foodQuantity),donatorEmail,donatorImage,donatorName,pickupLocation,expiredDateTime:new Date(expiredDateTime),additionalNotes,foodStatus}
         console.log(food);
 
         axios.post('https://assignment-11-server-bice-zeta.vercel.app/available-foods',food)

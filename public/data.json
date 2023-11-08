@@ -5,9 +5,9 @@
         "donatorImage": "https://i.ibb.co/xfLVTwQ/mitchell-luo-CMng5-Bz-Pv1o-unsplash.jpg",
         "donatorName": "Gabriel Carter",
         "donatorEmail": "gabriel@gmail.com",
-        "foodQuantity": 2,
+        "foodQuantity": 12,
         "pickupLocation": "321 Elm Street, City A, State",
-        "expiredDateTime": "30-11-2023",
+        "expiredDateTime": "2023-11-22T00:00:00.000Z",
         "additionalNotes": "Warm, freshly baked bread. Best if picked up by the mentioned date and time.",
         "foodStatus": "Available"
     },
@@ -17,9 +17,9 @@
         "donatorImage": "https://i.ibb.co/b2c6J9M/wepik-export-20231013215817-C2-TE.jpg",
         "donatorName": "Michael Johnson",
         "donatorEmail": "michael@gmail.com",
-        "foodQuantity": 2,
+        "foodQuantity": 10,
         "pickupLocation": "456 Oak Avenue, City B, State",
-        "expiredDateTime": "05-12-2023",
+        "expiredDateTime": "2023-12-07T00:00:00.000Z",
         "additionalNotes": "Assorted fresh fruits. Recommended to collect within the given time frame.",
         "foodStatus": "Available"
     },
@@ -31,7 +31,7 @@
         "donatorEmail": "mama@mami.com",
         "foodQuantity": 9,
         "pickupLocation": "789 Pine Road, City C, State",
-        "expiredDateTime": "10-12-2023",
+        "expiredDateTime": "2023-12-07T00:00:00.000Z",
         "additionalNotes": "Various canned soups. Ensure to collect before the expiration date.",
         "foodStatus": "Available"
     },
@@ -41,9 +41,9 @@
         "donatorImage": "https://i.ibb.co/hBHdZ5w/christian-buehner-DIt-Ylc26z-VI-unsplash.jpg",
         "donatorName": "Daniel Wilson",
         "donatorEmail": "daniel@gmail.com",
-        "foodQuantity": 3,
+        "foodQuantity": 9,
         "pickupLocation": "567 Maple Lane, City D, State",
-        "expiredDateTime": "25-11-2023",
+        "expiredDateTime": "2023-12-09T00:00:00.000Z",
         "additionalNotes": "Delicious homemade pasta. Best enjoyed fresh.",
         "foodStatus": "Available"
     },
@@ -53,9 +53,9 @@
         "donatorImage": "https://i.ibb.co/brCwHmQ/troy-spoelma-so0-AM1d-Cv-Hg-unsplash.jpg",
         "donatorName": "Olivia Brown",
         "donatorEmail": "olivia@gmail.com",
-        "foodQuantity": 3,
+        "foodQuantity": 8,
         "pickupLocation": "123 Oak Street, City A, State",
-        "expiredDateTime": "27-11-2023",
+        "expiredDateTime": "2023-12-03T00:00:00.000Z",
         "additionalNotes": "Harvested from our garden. Perfect for cooking.",
         "foodStatus": "Available"
     },
@@ -65,9 +65,9 @@
         "donatorImage": "https://i.ibb.co/GJj2nkj/peyman-farmani-c3s-Oxm-Kr-Am4-unsplash.jpg",
         "donatorName": "Liam Davis",
         "donatorEmail": "liam@gmail.com",
-        "foodQuantity": 5,
+        "foodQuantity": 11,
         "pickupLocation": "456 Pine Road, City B, State",
-        "expiredDateTime": "03-12-2023",
+        "expiredDateTime": "2023-12-01T00:00:00.000Z",
         "additionalNotes": "Various cereal flavors. Great for breakfast.",
         "foodStatus": "Available"
     },
@@ -89,9 +89,9 @@
         "donatorImage": "https://i.ibb.co/7rCJV48/foto-sushi-6anudmp-ILw4-unsplash.jpg",
         "donatorName": "Noah Garcia",
         "donatorEmail": "noah@gmail.com",
-        "foodQuantity": 4,
+        "foodQuantity": 14,
         "pickupLocation": "123 Maple Avenue, City D, State",
-        "expiredDateTime": "07-12-2023",
+        "expiredDateTime": "2023-11-20T00:00:00.000Z",
         "additionalNotes": "Freshly caught fish. Ideal for a seafood feast.",
       "foodStatus": "Available"
     },
@@ -101,9 +101,9 @@
         "donatorImage": "https://i.ibb.co/xfLVTwQ/mitchell-luo-CMng5-Bz-Pv1o-unsplash.jpg",
         "donatorName": "Ava Smith",
         "donatorEmail": "akibqureshee11@gmail.com",
-        "foodQuantity": 6,
+        "foodQuantity": 12,
         "pickupLocation": "321 Elm Street, City A, State",
-        "expiredDateTime": "14-12-2023",
+        "expiredDateTime": "2023-12-7T00:00:00.000Z",
         "additionalNotes": "A nutritious combo of rice and beans. Ready to cook.",
       "foodStatus": "Available"
     },
@@ -113,11 +113,11 @@
         "donatorImage": "https://i.ibb.co/rQtPjQV/52fc4e1cd6ca45524a376c0074e685a7.jpg",
         "donatorName": "Ethan Wilson",
         "donatorEmail": "ethan@gmail.com",
-        "foodQuantity": 6,
+        "foodQuantity": 5,
         "pickupLocation": "456 Oak Avenue, City B, State",
-        "expiredDateTime": "20-12-2023",
+        "expiredDateTime": "2023-11-27T00:00:00.000Z",
         "additionalNotes": "Delightful assortment of cupcakes. A sweet treat for any occasion.",
         "foodStatus": "Available"
     },
-    {"foodName":"Oven Baked Pasta","foodImage":"https://i.ibb.co/5LzYMMm/ben-lei-fl-Fd8-L7-B3g-unsplash-1.jpg","foodQuantity":3,"donatorEmail":"akibqureshee11@gmail.com","donatorImage":"https://lh3.googleusercontent.com/a/ACg8ocKuCEZsjfVs93P1LgR-I0Fpp42gj0fkWYLP6_0uKzPVZhPg=s96-c","donatorName":"AKIB QURESHEE","pickupLocation":"Sylhet Sadar,Sylhet.","expiredDateTime":"2023-11-14","additionalNotes":"very tasty","foodStatus":"available"}
+    {"foodName":"Oven Baked Pasta","foodImage":"https://i.ibb.co/5LzYMMm/ben-lei-fl-Fd8-L7-B3g-unsplash-1.jpg","foodQuantity":13,"donatorEmail":"akibqureshee11@gmail.com","donatorImage":"https://lh3.googleusercontent.com/a/ACg8ocKuCEZsjfVs93P1LgR-I0Fpp42gj0fkWYLP6_0uKzPVZhPg=s96-c","donatorName":"AKIB QURESHEE","pickupLocation":"Sylhet Sadar,Sylhet.","expiredDateTime":"2023-12-06T00:00:00.000Z","additionalNotes":"very tasty","foodStatus":"available"}
   ]

@@ -33,7 +33,7 @@ const FoodsCard = ({food}) => {
                         <div className="flex items-center justify-between">
                             {/* <!-- Distance --> */}
                             <div className="flex justify-between item-center">
-                                <p className="bg-gray-200 p-2 mr-2 rounded-full text-xs font-light text-gray-900">Expired in: {expiredDateTime}</p>
+                                <p className="bg-gray-200 p-2 mr-2 rounded-full text-xs font-light text-gray-900">Expired in: {expiredDateTime.slice(0,10)}</p>
                             </div>
                         </div>
                         <div className="text-xs font-semibold">

@@ -197,10 +197,6 @@ const ManageFoods = () => {
                     <input type="text" name='pickupLocation' defaultValue={food.pickupLocation} className="w-80 p-2  bg-slate-100 text-sm rounded-md"/>
                     </div>
                     <div className="flex flex-col">
-                    <label htmlFor="modalText" className="text-xs">Expire Date:</label>
-                    <input type="text" name='expiredDateTime' defaultValue={food.expiredDateTime} className="w-80 p-2  bg-slate-100 text-sm rounded-md"/>
-                    </div>
-                    <div className="flex flex-col">
                     <label htmlFor="modalText" className="text-xs">Food Status:</label>
                     <input type="text" name='foodStatus' defaultValue={food.foodStatus} className="w-80 p-2  bg-slate-100 text-sm rounded-md"/>
                     </div>
