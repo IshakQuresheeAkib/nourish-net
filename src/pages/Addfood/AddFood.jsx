@@ -45,7 +45,7 @@ const AddFood = () => {
             <div className="flex min-h-screen items-center justify-start bg-white px-3" data-aos='zoom-out-down'>
                 <div className="mx-auto w-full max-w-3xl">
                 <h1 className="myHeading" data-aos='zoom-in-down'>Add Food</h1>
-                    <p className="mt-3">Seize the Opportunity to Showcase Your Vehicle - List It with Us Today!</p>
+                    <p className="mt-3">Cooked too much? Share it with those who need it. Add your surplus food here!</p>
 
                     <form onSubmit={handleAddProduct} className="my-10">
                         <div className="grid gap-10 sm:grid-cols-2">
@@ -91,7 +91,7 @@ const AddFood = () => {
                             </div>
                            
                         </div>
-                        <button type="submit" className="mt-5  myBtn">Add Products</button>
+                        <button type="submit" className="mt-5  myBtn">Add Food</button>
                     </form>
                 </div>
             </div>
