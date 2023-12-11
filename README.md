@@ -4,6 +4,7 @@
 
 <h1>Features:</h1>
 <hr/>
+
 - On the homepage, I organized foods from the most to the least in the Featured Foods section, so users can easily see the meals with the maximum quantity available. 
 
 - Allow users to sign up, create profiles, and manage their donation or request of food history.
